@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  * @param int $index
  *
  * @return void 

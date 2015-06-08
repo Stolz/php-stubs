@@ -5,9 +5,9 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
- * @return resource Returns the absolute value of , as a GMP number.
+ * @return GMP Returns the absolute value of , as a GMP number.
  */
 function gmp_abs($a)
 {

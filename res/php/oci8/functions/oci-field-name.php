@@ -6,7 +6,7 @@
  * @phpstub
  *
  * @param resource $statement
- * @param int $field
+ * @param mixed $field
  *
  * @return string Returns the name as a string, or false on errors.
  */

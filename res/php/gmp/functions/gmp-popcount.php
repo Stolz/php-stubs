@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
  * @return int The population count of , as an ``integer``.
  */

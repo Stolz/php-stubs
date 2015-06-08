@@ -1,61 +1,59 @@
 <?php
 
 /** @phpstub */
-class Thread
+class Thread extends \Threaded implements \Countable, \Traversable, \ArrayAccess
 {
     /**
-     * Statistics
+     * Execution
      *
-     * @return int An integral number
+     * @return void 
      */
-    public function getCount()
-    {
-    }
-
-    /**
-     * Statistics
-     *
-     * @return long An integral number
-     */
-    public function getMax()
-    {
-    }
-
-    /**
-     * Statistics
-     *
-     * @return long An integral number
-     */
-    public function getPeak()
-    {
-    }
-
-    /**
-     * Return the number of items on the referenced Threads stack.
-     *
-     * @return int An integral number representing the number of items left on the stack.
-     */
-    public function getStacked()
-    {
-    }
-
-    /**
-     * Synchronization
-     *
-     * @param string $tid
-     *
-     * @return mixed An object of the same type as the requested Thread or Worker
-     */
-    public function getThread($tid)
+    public function detach()
     {
     }
 
     /**
      * Identification
      *
-     * @return long A numeric value representing the identity of the referenced Thread
+     * @return integer A numeric identity
+     */
+    public function getCreatorId()
+    {
+    }
+
+    /**
+     * Identification
+     *
+     * @return Thread An object representing the currently executing Thread
+     */
+    public function getCurrentThread()
+    {
+    }
+
+    /**
+     * Identification
+     *
+     * @return integer A numeric identity
+     */
+    public function getCurrentThreadId()
+    {
+    }
+
+    /**
+     * Identification
+     *
+     * @return integer A numeric identity
      */
     public function getThreadId()
+    {
+    }
+
+    /**
+     * Execution
+     *
+     * @return mixed The return value of the Callable
+     */
+    public function globally()
     {
     }
 
@@ -71,76 +69,38 @@ class Thread
     /**
      * State Detection
      *
-     * @return boolean A boolean indication of state
-     */
-    public function isRunning()
-    {
-    }
-
-    /**
-     * State Detection
-     *
-     * @return boolean A boolean indication of state
+     * @return boolean boolean indication of state
      */
     public function isStarted()
     {
     }
 
     /**
-     * State Detection
-     *
-     * @return boolean A boolean indication of state
-     */
-    public function isWaiting()
-    {
-    }
-
-    /**
      * Synchronization
      *
-     * @return mixed 
+     * @return boolean A boolean indication of success
      */
     public function join()
     {
     }
 
     /**
-     * Synchronization
+     * Execution
      *
-     * @return int An integral indication of success
+     * @return void A boolean indication of success
      */
-    public function notify()
+    public function kill()
     {
     }
 
     /**
      * Execution
      *
-     * @return mixed 
-     */
-    public function run()
-    {
-    }
-
-    /**
-     * Execution
-     *
-     * @param boolean $synchronized
+     * @param integer $options
      *
      * @return boolean A boolean indication of success
      */
-    public function start($synchronized = NULL)
-    {
-    }
-
-    /**
-     * Synchronization
-     *
-     * @param long $timeout
-     *
-     * @return int An integral indication of success
-     */
-    public function wait($timeout = NULL)
+    public function start($options = NULL)
     {
     }
 }

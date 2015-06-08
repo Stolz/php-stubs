@@ -4,12 +4,12 @@
 class MongoId
 {
     /** @var string */
-    public $id;
+    public $$id;
 
     /**
      * Creates a new id
      *
-     * @param string $id
+     * @param string|MongoId $id
      */
     public function __construct($id = NULL)
     {
@@ -70,6 +70,19 @@ class MongoId
      *             for storing exact or wide-ranging times.
      */
     public function getTimestamp()
+    {
+    }
+
+    /**
+     * Check if a value is a valid ObjectId
+     *
+     * @param mixed $value
+     *
+     * @return bool Returns true if  is a
+     *              ``MongoId`` instance or a string consisting of exactly 24
+     *              hexadecimal characters; otherwise, false is returned.
+     */
+    public function isValid($value)
     {
     }
 }

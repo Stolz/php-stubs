@@ -13,6 +13,6 @@
  *             is larger than the
  *             , -1 otherwise.
  */
-function bccomp($left_operand, $right_operand, $scale = NULL)
+function bccomp($left_operand, $right_operand, $scale = false)
 {
 }

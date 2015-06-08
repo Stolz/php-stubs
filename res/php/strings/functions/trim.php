@@ -6,10 +6,10 @@
  * @phpstub
  *
  * @param string $str
- * @param string $charlist
+ * @param string $character_mask
  *
  * @return string The trimmed string.
  */
-function trim($str, $charlist = NULL)
+function trim($str, $character_mask = ' \\t\\n\\r\\0\\x0B')
 {
 }

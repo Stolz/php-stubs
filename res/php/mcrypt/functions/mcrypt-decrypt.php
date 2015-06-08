@@ -11,7 +11,7 @@
  * @param string $mode
  * @param string $iv
  *
- * @return string Returns the decrypted data as a string.
+ * @return string Returns the decrypted data as a string .
  */
 function mcrypt_decrypt($cipher, $key, $data, $mode, $iv = NULL)
 {

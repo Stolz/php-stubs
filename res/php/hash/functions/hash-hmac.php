@@ -13,6 +13,7 @@
  * @return string Returns a string containing the calculated message digest as lowercase hexits
  *                unless  is set to true in which case the raw
  *                binary representation of the message digest is returned.
+ *                Returns false when  is unknown.
  */
 function hash_hmac($algo, $data, $key, $raw_output = false)
 {

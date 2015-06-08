@@ -13,6 +13,6 @@
  *
  * @return array Returns an indexed array containing the fields read.
  */
-function fgetcsv($handle, $length = false, $delimiter = '\',\'', $enclosure = '\'"\'', $escape = '\'\\\\\'')
+function fgetcsv($handle, $length = false, $delimiter = ',', $enclosure = '\'"\'', $escape = '\\')
 {
 }

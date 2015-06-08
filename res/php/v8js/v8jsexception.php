@@ -29,7 +29,7 @@ class V8JsException extends \Exception
     /**
      * The getJsSourceLine purpose
      *
-     * @return int 
+     * @return string 
      */
     public function getJsSourceLine()
     {

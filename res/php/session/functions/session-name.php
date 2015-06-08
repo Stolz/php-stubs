@@ -7,7 +7,9 @@
  *
  * @param string $name
  *
- * @return string Returns the name of the current session.
+ * @return string Returns the name of the current session. If  is given
+ *                and function updates the session name, name of the  session
+ *                is returned.
  */
 function session_name($name = NULL)
 {

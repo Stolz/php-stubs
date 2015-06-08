@@ -10,6 +10,6 @@
  *
  * @return string The uncompressed string, or false on error.
  */
-function gzgets($zp, $length)
+function gzgets($zp, $length = NULL)
 {
 }

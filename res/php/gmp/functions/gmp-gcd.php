@@ -5,11 +5,11 @@
  *
  * @phpstub
  *
- * @param resource $a
- * @param resource $b
+ * @param GMP $a
+ * @param GMP $b
  *
- * @return resource A positive GMP number that divides into both
- *                  and .
+ * @return GMP A positive GMP number that divides into both
+ *             and .
  */
 function gmp_gcd($a, $b)
 {

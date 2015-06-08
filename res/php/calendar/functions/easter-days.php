@@ -11,6 +11,6 @@
  * @return int The number of days after March 21st that the Easter Sunday
  *             is in the given .
  */
-function easter_days($year = NULL, $method = false)
+function easter_days($year = false, $method = false)
 {
 }

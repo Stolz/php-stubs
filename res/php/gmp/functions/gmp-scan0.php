@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  * @param int $start
  *
  * @return int Returns the index of the found bit, as an ``integer``. The

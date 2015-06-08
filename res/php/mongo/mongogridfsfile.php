@@ -40,7 +40,7 @@ class MongoGridFSFile
     /**
      * Returns a resource that can be used to read the stored file
      *
-     * @return stream Returns a resource that can be used to read the file with
+     * @return resource Returns a resource that can be used to read the file with
      */
     public function getResource()
     {

@@ -14,14 +14,17 @@ class HttpQueryString implements \ArrayAccess, \Serializable
     }
 
     /**
-     * Get (part of) query string
+     * Get the query string or a part thereof
      *
      * @param string $key
      * @param mixed $type
      * @param mixed $defval
      * @param bool $delete
      *
-     * @return mixed Returns the value of the query string param or the whole query string if no key was specified on success or defval if key does not exist.
+     * @return mixed Returns the value of the query string param or the whole query string if
+     *               was not specified. Returns
+     *               if the specified
+     *               does not exist.
      */
     public function get($key = NULL, $type = '0', $defval = NULL, $delete = false)
     {

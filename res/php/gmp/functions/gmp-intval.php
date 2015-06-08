@@ -5,9 +5,9 @@
  *
  * @phpstub
  *
- * @param resource $gmpnumber
+ * @param GMP $gmpnumber
  *
- * @return int An ``integer`` value of .
+ * @return int The ``integer`` value of .
  */
 function gmp_intval($gmpnumber)
 {

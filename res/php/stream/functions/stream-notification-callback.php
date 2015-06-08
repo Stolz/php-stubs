@@ -1,7 +1,7 @@
 <?php
 
 /**
- * A callback function for the  context paramater
+ * A callback function for the  context parameter
  *
  * @phpstub
  *

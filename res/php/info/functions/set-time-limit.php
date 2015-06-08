@@ -7,7 +7,7 @@
  *
  * @param int $seconds
  *
- * @return void 
+ * @return bool Returns true on success, or false on failure.
  */
 function set_time_limit($seconds)
 {

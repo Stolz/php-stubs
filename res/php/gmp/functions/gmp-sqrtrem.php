@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
  * @return array Returns array where first element is the integer square root of
  *               and the second is the remainder

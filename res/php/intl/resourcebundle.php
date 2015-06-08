@@ -24,7 +24,7 @@ class ResourceBundle
      * @param string $bundlename
      * @param bool $fallback
      *
-     * @return ResourceBundle Returns ``ResourceBundle`` object or false on error.
+     * @return ResourceBundle Returns ``ResourceBundle`` object or null on error.
      */
     public function create($locale, $bundlename, $fallback = NULL, $locale, $bundlename, $fallback = NULL)
     {

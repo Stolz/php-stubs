@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Flush the output buffer
+ * Flush system output buffer
  *
  * @phpstub
  *

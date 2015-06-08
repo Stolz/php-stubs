@@ -5,10 +5,10 @@
  *
  * @phpstub
  *
- * @param string $str
+ * @param string $string
  *
  * @return string Returns the lowercased string.
  */
-function strtolower($str)
+function strtolower($string)
 {
 }

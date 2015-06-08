@@ -11,6 +11,18 @@ class SplDoublyLinkedList implements \Iterator, \ArrayAccess, \Countable
     }
 
     /**
+     * Add/insert a new value at the specified index
+     *
+     * @param mixed $index
+     * @param mixed $newval
+     *
+     * @return void 
+     */
+    public function add($index, $newval)
+    {
+    }
+
+    /**
      * Peeks at the node from the beginning of the doubly linked list
      *
      * @return mixed The value of the first node.

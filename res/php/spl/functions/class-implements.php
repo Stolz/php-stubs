@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Return the interfaces which are implemented by the given class
+ * Return the interfaces which are implemented by the given class or interface
  *
  * @phpstub
  *

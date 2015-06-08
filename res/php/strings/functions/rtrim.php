@@ -6,11 +6,11 @@
  * @phpstub
  *
  * @param string $str
- * @param string $charlist
+ * @param string $character_mask
  *
  * @return string Returns the modified string.
  */
-function rtrim($str, $charlist = NULL)
+function rtrim($str, $character_mask = NULL)
 {
 }
 
@@ -21,10 +21,10 @@ function rtrim($str, $charlist = NULL)
  * @phpstub
  *
  * @param string $str
- * @param string $charlist
+ * @param string $character_mask
  *
  * @return string Returns the modified string.
  */
-function chop($str, $charlist = NULL)
+function chop($str, $character_mask = NULL)
 {
 }

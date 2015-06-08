@@ -5,10 +5,10 @@
  *
  * @phpstub
  *
- * @param resource $n
- * @param resource $d
+ * @param GMP $n
+ * @param GMP $d
  *
- * @return resource 
+ * @return GMP 
  */
 function gmp_mod($n, $d)
 {

@@ -5,11 +5,11 @@
  *
  * @phpstub
  *
- * @param resource $n
- * @param resource $d
+ * @param GMP $n
+ * @param GMP $d
  * @param int $round
  *
- * @return resource The remainder, as a GMP number.
+ * @return GMP The remainder, as a GMP number.
  */
 function gmp_div_r($n, $d, $round = false)
 {

@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param int $fd
+ * @param mixed $fd
  *
  * @return bool Returns true if  is an open descriptor connected
  *              to a terminal and false otherwise.

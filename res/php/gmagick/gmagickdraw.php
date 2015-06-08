@@ -370,7 +370,7 @@ class GmagickDraw
     }
 
     /**
-     * Specifies specifies the text code set
+     * Specifies the text code set
      *
      * @param string $encoding
      *

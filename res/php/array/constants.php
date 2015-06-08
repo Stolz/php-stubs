@@ -10,6 +10,8 @@ define('SORT_STRING', 0);
 define('SORT_LOCALE_STRING', 0);
 define('SORT_NATURAL', 0);
 define('SORT_FLAG_CASE', 0);
+define('ARRAY_FILTER_USE_KEY', 0);
+define('ARRAY_FILTER_USE_BOTH', 0);
 define('COUNT_NORMAL', 0);
 define('COUNT_RECURSIVE', 0);
 define('EXTR_OVERWRITE', 0);

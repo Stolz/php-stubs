@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $gmpnumber
+ * @param GMP $gmpnumber
  * @param int $base
  *
  * @return string The number, as a ``string``.

@@ -534,13 +534,15 @@ class HaruPage
     }
 
     /**
-     * Calculate the number of characters which can be included within the specified width
+     * Calculate the byte length of characters which can be included on one line of the specified width
      *
      * @param string $text
      * @param float $width
      * @param bool $wordwrap
      *
-     * @return int Returns the number of characters which can be included within the specified width.
+     * @return int Returns the byte length of characters which can be included within the specified width.
+     *             For single-byte encodings, this is equal to the number of characters. For multi-byte encodings,
+     *             this is not necessarily the case.
      */
     public function measureText($text, $width, $wordwrap = false)
     {

@@ -8,7 +8,7 @@
  * @param resource $result_id
  * @param int $field_number
  *
- * @return int Returns the field name as a string, or false on error.
+ * @return int Returns the field length, or false on error.
  */
 function odbc_field_len($result_id, $field_number)
 {

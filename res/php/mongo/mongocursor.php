@@ -1,7 +1,7 @@
 <?php
 
 /** @phpstub */
-class MongoCursor implements \Iterator
+class MongoCursor implements \MongoCursorInterface, \Iterator
 {
     /** @var integer */
     public $timeout;
@@ -12,7 +12,7 @@ class MongoCursor implements \Iterator
     /**
      * Create a new cursor
      *
-     * @param Mongo $connection
+     * @param MongoClient $connection
      * @param string $ns
      * @param array $query
      * @param array $fields
@@ -69,16 +69,18 @@ class MongoCursor implements \Iterator
     /**
      * Returns the current element
      *
-     * @return array The current result as an associative array.
+     * @return array The current result document as an associative array. null will be returned
+     *               if there is no result.
      */
     public function current()
     {
     }
 
     /**
-     * Checks if there are documents that have not been sent yet from the database for this cursor
+     * Checks if there are results that have not yet been sent from the database
      *
-     * @return bool Returns if there are more results that have not been sent to the client, yet.
+     * @return bool Returns true if there are more results that have not yet been sent to the
+     *              client, and false otherwise.
      */
     public function dead()
     {
@@ -114,9 +116,9 @@ class MongoCursor implements \Iterator
     }
 
     /**
-     * Return the next object to which this cursor points, and advance the cursor
+     * Advances the cursor to the next result, and returns that result
      *
-     * @return array Returns the next object.
+     * @return array
      */
     public function getNext()
     {
@@ -125,12 +127,7 @@ class MongoCursor implements \Iterator
     /**
      * Get the read preference for this query
      *
-     * @return array This function returns an array describing the read preference. The array
-     *               contains the values  for the numeric read preference
-     *               mode,  for the name of the read preference
-     *               mode, and  containing a list of all tag set
-     *               criteria. If no tag sets were specified,  will not
-     *               be present in the array.
+     * @return array
      */
     public function getReadPreference()
     {
@@ -148,11 +145,11 @@ class MongoCursor implements \Iterator
     /**
      * Gives the database a hint about the query
      *
-     * @param array $key_pattern
+     * @param mixed $index
      *
      * @return MongoCursor Returns this cursor.
      */
-    public function hint($key_pattern)
+    public function hint($index)
     {
     }
 
@@ -168,18 +165,22 @@ class MongoCursor implements \Iterator
     }
 
     /**
-     * Gets the query, fields, limit, and skip for this cursor
+     * Gets information about the cursor's creation and iteration
      *
-     * @return array Returns the namespace, limit, skip, query, and fields for this cursor.
+     * @return array Returns the namespace, batch size, limit, skip, flags, query, and projected
+     *               fields for this cursor. If the cursor has started iterating, additional
+     *               information about iteration and the connection will be included.
      */
     public function info()
     {
     }
 
     /**
-     * Returns the current resultaposs _id
+     * Returns the current resultaposs _id, or its index within the result set
      *
-     * @return string The current resultaposs _id as a string.
+     * @return string|int The current resultaposs  as a string. If the result
+     *                    has no , its numeric index within the result set will
+     *                    be returned as an integer.
      */
     public function key()
     {
@@ -197,9 +198,20 @@ class MongoCursor implements \Iterator
     }
 
     /**
-     * Advances the cursor to the next result
+     * Sets a server-side timeout for this query
      *
-     * @return void null.
+     * @param int $ms
+     *
+     * @return MongoCursor This cursor.
+     */
+    public function maxTimeMS($ms)
+    {
+    }
+
+    /**
+     * Advances the cursor to the next result, and returns that result
+     *
+     * @return array Returns the next document.
      */
     public function next()
     {
@@ -237,7 +249,7 @@ class MongoCursor implements \Iterator
     /**
      * Sets arbitrary flags in case there is no method available the specific flag
      *
-     * @param bool $flag
+     * @param int $flag
      * @param bool $set
      *
      * @return MongoCursor Returns this cursor.
@@ -249,10 +261,10 @@ class MongoCursor implements \Iterator
     /**
      * Set the read preference for this query
      *
-     * @param int $read_preference
+     * @param string $read_preference
      * @param array $tags
      *
-     * @return bool
+     * @return MongoCursor Returns this cursor.
      */
     public function setReadPreference($read_preference, $tags = array())
     {
@@ -270,7 +282,7 @@ class MongoCursor implements \Iterator
     }
 
     /**
-     * Sets whether this query can be done on a slave
+     * Sets whether this query can be done on a secondary [deprecated]
      *
      * @param bool $okay
      *
@@ -325,7 +337,7 @@ class MongoCursor implements \Iterator
     /**
      * Checks if the cursor is reading a valid result.
      *
-     * @return bool If the current result is not null.
+     * @return bool true if the current result is not null, and false otherwise.
      */
     public function valid()
     {

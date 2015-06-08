@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
  * @return bool Returns true if  is a perfect square,
  *              false otherwise.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Checks if the field is null
+ * Checks if a field in the currently fetched row is null
  *
  * @phpstub
  *

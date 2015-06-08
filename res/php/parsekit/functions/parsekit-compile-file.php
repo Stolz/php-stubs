@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Compile a string of PHP code and return the resulting op array
+ * Compile a PHP file and return the resulting op array
  *
  * @phpstub
  *

@@ -1,5 +1,8 @@
 <?php
 
+define('O_WRONLY', 0);
+define('O_CREAT', 0);
+define('O_APPEND', 0);
 define('F_DUPFD', 0);
 define('F_GETFD', 0);
 define('F_GETFL', 0);
@@ -12,9 +15,7 @@ define('F_SETLKW', 0);
 define('F_SETOWN', 0);
 define('F_UNLCK', 0);
 define('F_WRLCK', 0);
-define('O_APPEND', 0);
 define('O_ASYNC', 0);
-define('O_CREAT', 0);
 define('O_EXCL', 0);
 define('O_NDELAY', 0);
 define('O_NOCTTY', 0);
@@ -23,7 +24,6 @@ define('O_RDONLY', 0);
 define('O_RDWR', 0);
 define('O_SYNC', 0);
 define('O_TRUNC', 0);
-define('O_WRONLY', 0);
 define('S_IRGRP', 0);
 define('S_IROTH', 0);
 define('S_IRUSR', 0);

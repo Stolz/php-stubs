@@ -1,12 +1,12 @@
 <?php
 
 /** @phpstub */
-class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Traversable, \Iterator, \SeekableIterator
+class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \SeekableIterator
 {
     const DROP_NEW_LINE = 1;
     const READ_AHEAD = 2;
     const READ_CSV = 8;
-    const SKIP_EMPTY = 6;
+    const SKIP_EMPTY = 4;
 
     /**
      * Construct a new file object.
@@ -22,6 +22,8 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Travers
 
     /**
      * Alias of 
+     *
+     * @return void
      */
     public function __toString()
     {
@@ -125,10 +127,22 @@ class SplFileObject extends \SplFileInfo implements \RecursiveIterator, \Travers
      * @param array $fields
      * @param string $delimiter
      * @param string $enclosure
+     * @param string $escape
      *
      * @return int Returns the length of the written string.
      */
-    public function fputcsv($fields, $delimiter = '\',\'', $enclosure = '\'"\'')
+    public function fputcsv($fields, $delimiter = ',', $enclosure = '\'"\'', $escape = '\\')
+    {
+    }
+
+    /**
+     * Read from file
+     *
+     * @param int $length
+     *
+     * @return string Returns the string read from the file .
+     */
+    public function fread($length)
     {
     }
 

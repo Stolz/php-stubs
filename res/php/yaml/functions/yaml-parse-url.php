@@ -11,9 +11,9 @@
  * @param array $callbacks
  *
  * @return mixed Returns the value encoded in  in appropriate
- *               PHP type. If  is  an
- *               ``array`` will be returned with one entry for each document found
- *               in the stream.
+ *               PHP type. If  is
+ *               an ``array`` will be returned with one entry
+ *               for each document found in the stream.
  */
 function yaml_parse_url($url, $pos = false, &$ndocs = NULL, $callbacks = array())
 {

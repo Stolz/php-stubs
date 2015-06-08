@@ -5,8 +5,8 @@
  *
  * @phpstub
  *
- * @param resource $n
- * @param resource $d
+ * @param GMP $n
+ * @param GMP $d
  * @param int $round
  *
  * @return array Returns an ``array``, with the first

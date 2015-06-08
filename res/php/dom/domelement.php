@@ -1,7 +1,7 @@
 <?php
 
 /** @phpstub */
-class DomElement extends \DOMNode
+class DOMElement extends \DOMNode
 {
     /** @var string */
     public $tagName;
@@ -100,48 +100,6 @@ class DomElement extends \DOMNode
     }
 
     /**
-     * 
-       Returns the value of the given attribute
-      
-     *
-     * @param string $name
-     *
-     * @return string Returns the value of the attribute as a string or an empty string if no
-     *                attribute with the given  is found.
-     */
-    public function get_attribute($name)
-    {
-    }
-
-    /**
-     * 
-       Returns the node of the given attribute
-      
-     *
-     * @param string $name
-     *
-     * @return DomAttribute Returns the node of the attribute as a ``DomAttribute``
-     *                      or false if no attribute with the given  is
-     *                      found.
-     */
-    public function get_attribute_node($name)
-    {
-    }
-
-    /**
-     * 
-       Gets elements by tagname
-      
-     *
-     * @param string $name
-     *
-     * @return DomElement[] Returns an array of ``DomElement`` objects.
-     */
-    public function get_elements_by_tagname($name)
-    {
-    }
-
-    /**
      * Checks to see if attribute exists
      *
      * @param string $name
@@ -163,19 +121,6 @@ class DomElement extends \DOMNode
      * @return bool 
      */
     public function hasAttributeNS($namespaceURI, $localName)
-    {
-    }
-
-    /**
-     * 
-       Checks to see if an attribute exists in the current node
-      
-     *
-     * @param string $name
-     *
-     * @return bool Returns true if the asked attribute exists, false otherwise.
-     */
-    public function has_attribute($name)
     {
     }
 
@@ -214,25 +159,12 @@ class DomElement extends \DOMNode
     }
 
     /**
-     * 
-       Removes attribute
-      
-     *
-     * @param string $name
-     *
-     * @return bool 
-     */
-    public function remove_attribute($name)
-    {
-    }
-
-    /**
      * Adds new attribute
      *
      * @param string $name
      * @param string $value
      *
-     * @return DOMAttr The new ``DOMAttr`` or false if an error occured.
+     * @return DOMAttr The new ``DOMAttr`` or false if an error occurred.
      */
     public function setAttribute($name, $value)
     {
@@ -307,45 +239,6 @@ class DomElement extends \DOMNode
      * @return void 
      */
     public function setIdAttributeNode($attr, $isId)
-    {
-    }
-
-    /**
-     * 
-       Sets the value of an attribute
-      
-     *
-     * @param string $name
-     * @param string $value
-     *
-     * @return DomAttribute Returns the old ``DomAttribute`` node, or the new one
-     *                      if you are creating the attribute for the first time.
-     */
-    public function set_attribute($name, $value)
-    {
-    }
-
-    /**
-     * 
-       Adds new attribute
-      
-     *
-     * @param DomNode $attr
-     *
-     * @return DomNode
-     */
-    public function set_attribute_node($attr)
-    {
-    }
-
-    /**
-     * 
-       Returns the name of the current element
-      
-     *
-     * @return string Returns the name of the current ``DomElement`` node.
-     */
-    public function tagname()
     {
     }
 }

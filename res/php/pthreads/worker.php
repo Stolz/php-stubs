@@ -1,32 +1,23 @@
 <?php
 
 /** @phpstub */
-class Worker
+class Worker extends \Thread implements \Traversable, \Countable, \ArrayAccess
 {
-    /**
-     * Identification
-     *
-     * @return long A numeric value representing the identity of the creating context
-     */
-    public function getCreatorId()
-    {
-    }
-
     /**
      * Stack Analysis
      *
-     * @return int An integral value
+     * @return integer An numeric value
      */
     public function getStacked()
     {
     }
 
     /**
-     * Identification
+     * State Detection
      *
-     * @return long A numeric value representing the identity of the referenced Worker
+     * @return boolean A boolean indication of state
      */
-    public function getThreadId()
+    public function isShutdown()
     {
     }
 
@@ -35,67 +26,38 @@ class Worker
      *
      * @return boolean A boolean indication of state
      */
-    public function isJoined()
-    {
-    }
-
-    /**
-     * State Detection
-     *
-     * @return boolean A boolean indication of state
-     */
-    public function isWaiting()
+    public function isWorking()
     {
     }
 
     /**
      * Synchronization
      *
-     * @return mixed 
+     * @return boolean 
      */
-    public function join()
-    {
-    }
-
-    /**
-     * Execution
-     *
-     * @return mixed 
-     */
-    public function run()
+    public function shutdown()
     {
     }
 
     /**
      * Stacking
      *
-     * @param Stackable $work
+     * @param Threaded $work
      *
-     * @return int The new length of the stack
+     * @return integer The new length of the stack
      */
-    public function stack($work)
-    {
-    }
-
-    /**
-     * Execution
-     *
-     * @param boolean $synchronized
-     *
-     * @return boolean A boolean indication of success
-     */
-    public function start($synchronized = NULL)
+    public function stack(&$work)
     {
     }
 
     /**
      * Stacking
      *
-     * @param Stackable $work
+     * @param Threaded $work
      *
-     * @return int The new length of the stack
+     * @return integer The new length of the stack
      */
-    public function unstack($work = NULL)
+    public function unstack(&$work = NULL)
     {
     }
 }

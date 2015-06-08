@@ -12,7 +12,19 @@ class Yaf_Route_Map implements \Yaf_Route_Interface
      * @param string $controller_prefer
      * @param string $delimiter
      */
-    public function __construct($controller_prefer = false, $delimiter = '\'\'')
+    public function __construct($controller_prefer = false, $delimiter = '')
+    {
+    }
+
+    /**
+     * Assemble a url
+     *
+     * @param array $info
+     * @param array $query
+     *
+     * @return string 
+     */
+    public function assemble($info, $query = array())
     {
     }
 

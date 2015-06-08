@@ -1,9 +1,12 @@
 <?php
 
+define('PGSQL_LIBPQ_VERSION', 'dummy');
+define('PGSQL_LIBPQ_VERSION_STR', 'dummy');
 define('PGSQL_ASSOC', 0);
 define('PGSQL_NUM', 0);
 define('PGSQL_BOTH', 0);
 define('PGSQL_CONNECT_FORCE_NEW', 0);
+define('PGSQL_CONNECT_ASYNC', 0);
 define('PGSQL_CONNECTION_BAD', 0);
 define('PGSQL_CONNECTION_OK', 0);
 define('PGSQL_SEEK_SET', 0);
@@ -42,3 +45,13 @@ define('PGSQL_STATUS_STRING', 0);
 define('PGSQL_CONV_IGNORE_DEFAULT', 0);
 define('PGSQL_CONV_FORCE_NULL', 0);
 define('PGSQL_CONV_IGNORE_NOT_NULL', 0);
+define('PGSQL_DML_NO_CONV', 0);
+define('PGSQL_DML_EXEC', 0);
+define('PGSQL_DML_ASYNC', 0);
+define('PGSQL_DML_STRING', 0);
+define('PGSQL_DML_ESCAPE', 0);
+define('PGSQL_POLLING_FAILED', 0);
+define('PGSQL_POLLING_READING', 0);
+define('PGSQL_POLLING_WRITING', 0);
+define('PGSQL_POLLING_OK', 0);
+define('PGSQL_POLLING_ACTIVE', 0);

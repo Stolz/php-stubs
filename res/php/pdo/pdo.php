@@ -59,13 +59,11 @@ class PDO
     const FETCH_PROPS_LATE = NULL;
     const FETCH_SERIALIZE = NULL;
     const FETCH_UNIQUE = NULL;
-    const MYSQL_ATTR_CIPHER = NULL;
     const MYSQL_ATTR_COMPRESS = NULL;
     const MYSQL_ATTR_DIRECT_QUERY = NULL;
     const MYSQL_ATTR_FOUND_ROWS = NULL;
     const MYSQL_ATTR_IGNORE_SPACE = NULL;
     const MYSQL_ATTR_INIT_COMMAND = NULL;
-    const MYSQL_ATTR_KEY = NULL;
     const MYSQL_ATTR_LOCAL_INFILE = NULL;
     const MYSQL_ATTR_MAX_BUFFER_SIZE = NULL;
     const MYSQL_ATTR_READ_DEFAULT_FILE = NULL;
@@ -73,6 +71,8 @@ class PDO
     const MYSQL_ATTR_SSL_CA = NULL;
     const MYSQL_ATTR_SSL_CAPATH = NULL;
     const MYSQL_ATTR_SSL_CERT = NULL;
+    const MYSQL_ATTR_SSL_CIPHER = NULL;
+    const MYSQL_ATTR_SSL_KEY = NULL;
     const MYSQL_ATTR_USE_BUFFERED_QUERY = NULL;
     const NULL_EMPTY_STRING = NULL;
     const NULL_NATURAL = NULL;
@@ -248,6 +248,89 @@ class PDO
     }
 
     /**
+     * Copy data from PHP array into table
+     *
+     * @param string $table_name
+     * @param array $rows
+     * @param string $delimiter
+     * @param string $null_as
+     * @param string $fields
+     *
+     * @return bool Returns true on success,.
+     */
+    public function pgsqlCopyFromArray($table_name, $rows, $delimiter = '\'\\t\'', $null_as = '\\\\\\\\N', $fields = NULL)
+    {
+    }
+
+    /**
+     * Copy data from file into table
+     *
+     * @param string $table_name
+     * @param string $filename
+     * @param string $delimiter
+     * @param string $null_as
+     * @param string $fields
+     *
+     * @return bool Returns true on success,.
+     */
+    public function pgsqlCopyFromFile($table_name, $filename, $delimiter = '\'\\t\'', $null_as = '\\\\\\\\N', $fields = NULL)
+    {
+    }
+
+    /**
+     * Copy data from database table into PHP array
+     *
+     * @param string $table_name
+     * @param array $rows
+     * @param string $delimiter
+     * @param string $null_as
+     * @param string $fields
+     *
+     * @return array Returns an array of rows,.
+     */
+    public function pgsqlCopyToArray($table_name, $rows, $delimiter = '\'\\t\'', $null_as = '\\\\\\\\N', $fields = NULL)
+    {
+    }
+
+    /**
+     * Copy data from table into file
+     *
+     * @param string $table_name
+     * @param string $filename
+     * @param string $delimiter
+     * @param string $null_as
+     * @param string $fields
+     *
+     * @return bool Returns true on success,.
+     */
+    public function pgsqlCopyToFile($table_name, $filename, $delimiter = '\'\\t\'', $null_as = '\\\\\\\\N', $fields = NULL)
+    {
+    }
+
+    /**
+     * Get asynchronous notification
+     *
+     * @param int $result_type
+     * @param int $ms_timeout
+     *
+     * @return array If one or more notifications is pending, returns a single row, with fields
+     *               and , otherwise returns
+     *               false.
+     */
+    public function pgsqlGetNotify($result_type = false, $ms_timeout = false)
+    {
+    }
+
+    /**
+     * Get the server PID
+     *
+     * @return int The server's PID.
+     */
+    public function pgsqlGetPid()
+    {
+    }
+
+    /**
      * Creates a new large object
      *
      * @return string Returns the OID of the newly created large object on success, or false
@@ -377,6 +460,20 @@ class PDO
      * @return bool 
      */
     public function sqliteCreateAggregate($function_name, $step_func, $finalize_func, $num_args = NULL)
+    {
+    }
+
+    /**
+     * 
+       Registers a User Defined Function for use as a collating function in SQL statements
+      
+     *
+     * @param string $name
+     * @param callable $callback
+     *
+     * @return bool 
+     */
+    public function sqliteCreateCollation($name, $callback)
     {
     }
 

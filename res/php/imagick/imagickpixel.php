@@ -62,6 +62,15 @@ class ImagickPixel
     }
 
     /**
+     * Description
+     *
+     * @return mixed The quantum value of the color element. Float if ImageMagick was compiled with HDRI, otherwise an int.
+     */
+    public function getColorQuantum()
+    {
+    }
+
+    /**
      * Gets the normalized value of the provided color channel
      *
      * @param int $color
@@ -74,12 +83,54 @@ class ImagickPixel
     }
 
     /**
+     * Description
+     *
+     * @return mixed The quantum value of the color element. Float if ImageMagick was compiled with HDRI, otherwise an int.
+     */
+    public function getColorValueQuantum()
+    {
+    }
+
+    /**
      * Returns the normalized HSL color of the ImagickPixel object
      *
      * @return array Returns the HSL value in an array with the keys "hue",
      *               "saturation", and "luminosity". Throws ImagickPixelException on failure.
      */
     public function getHSL()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @return int 
+     */
+    public function getIndex()
+    {
+    }
+
+    /**
+     * Check the distance between this color and another
+     *
+     * @param ImagickPixel $color
+     * @param float $fuzz
+     *
+     * @return bool 
+     */
+    public function isPixelSimilar($color, $fuzz)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $color
+     * @param string $fuzz
+     *
+     * @return bool 
+     */
+    public function isPixelSimilarQuantum($color, $fuzz = NULL)
     {
     }
 
@@ -107,6 +158,17 @@ class ImagickPixel
     }
 
     /**
+     * Description
+     *
+     * @param string $colorCount
+     *
+     * @return void 
+     */
+    public function setColorCount($colorCount)
+    {
+    }
+
+    /**
      * Sets the normalized value of one of the channels
      *
      * @param int $color
@@ -115,6 +177,18 @@ class ImagickPixel
      * @return bool 
      */
     public function setColorValue($color, $value)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param int $color
+     * @param mixed $value
+     *
+     * @return void 
+     */
+    public function setColorValueQuantum($color, $value)
     {
     }
 
@@ -128,6 +202,17 @@ class ImagickPixel
      * @return bool 
      */
     public function setHSL($hue, $saturation, $luminosity)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param int $index
+     *
+     * @return void 
+     */
+    public function setIndex($index)
     {
     }
 }

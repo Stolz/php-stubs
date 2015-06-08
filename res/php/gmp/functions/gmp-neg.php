@@ -5,9 +5,9 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
- * @return resource Returns -, as a GMP number.
+ * @return GMP Returns -, as a GMP number.
  */
 function gmp_neg($a)
 {

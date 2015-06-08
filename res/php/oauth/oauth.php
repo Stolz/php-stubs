@@ -115,10 +115,11 @@ class OAuth
      * @param string $access_token_url
      * @param string $auth_session_handle
      * @param string $verifier_token
+     * @param string $http_method
      *
      * @return array Returns an array containing the parsed OAuth response on success or false on failure.
      */
-    public function getAccessToken($access_token_url, $auth_session_handle = NULL, $verifier_token = NULL)
+    public function getAccessToken($access_token_url, $auth_session_handle = NULL, $verifier_token = NULL, $http_method = NULL)
     {
     }
 
@@ -180,10 +181,11 @@ class OAuth
      *
      * @param string $request_token_url
      * @param string $callback_url
+     * @param string $http_method
      *
      * @return array Returns an array containing the parsed OAuth response on success or false on failure.
      */
-    public function getRequestToken($request_token_url, $callback_url = NULL)
+    public function getRequestToken($request_token_url, $callback_url = NULL, $http_method = NULL)
     {
     }
 

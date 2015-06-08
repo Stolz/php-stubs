@@ -4,51 +4,55 @@
 class MongoLog
 {
     const ALL = 31;
+    const CON = 2;
     const FINE = 4;
     const INFO = 2;
     const IO = 4;
     const NONE = 0;
     const PARSE = 16;
-    const POOL = 2;
+    const POOL = 1;
     const RS = 1;
     const SERVER = 8;
     const WARNING = 1;
 
     /** @var int */
-    public $module;
+    private $module;
 
     /** @var int */
-    public $level;
+    private $level;
+
+    /** @var int */
+    private $callback;
 
     /**
-     * Retrieve the previously set callback function name
+     * Gets the previously set callback function
      *
-     * @return void Returns the callback function name, or false if not set yet.
+     * @return callable Returns the callback function, or false if not set yet.
      */
     public function getCallback()
     {
     }
 
     /**
-     * Gets the log level
+     * Gets the level(s) currently being logged
      *
-     * @return int Returns the current level.
+     * @return int Returns the level(s) currently being logged.
      */
     public function getLevel()
     {
     }
 
     /**
-     * Gets the modules currently being logged
+     * Gets the module(s) currently being logged
      *
-     * @return int Returns the modules currently being logged.
+     * @return int Returns the module(s) currently being logged.
      */
     public function getModule()
     {
     }
 
     /**
-     * Set a callback function to be called on events
+     * Sets a callback function to be invoked for events
      *
      * @param callable $log_function
      *
@@ -59,7 +63,7 @@ class MongoLog
     }
 
     /**
-     * Sets logging level
+     * Sets the level(s) to be logged
      *
      * @param int $level
      *
@@ -70,7 +74,7 @@ class MongoLog
     }
 
     /**
-     * Sets driver functionality to log
+     * Sets the module(s) to be logged
      *
      * @param int $module
      *

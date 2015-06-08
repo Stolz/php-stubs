@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  * @param int $reps
  *
  * @return int If this function returns 0,  is

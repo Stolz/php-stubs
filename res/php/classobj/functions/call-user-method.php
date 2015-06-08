@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Call a user method on an specific object [deprecated]
+ * Call a user method on an specific object
  *
  * @phpstub-variable-parameters
  * @phpstub

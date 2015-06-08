@@ -15,8 +15,9 @@
  *             is less than , gt
  *             0 if it is greater than , and 0 if they are equal.
  *             If  is equal to or greater than the length of
- *             or  is set and
- *             is less than 1,  prints a warning and returns
+ *             , or the  is
+ *             set and is less than 1 (prior to PHP 5.6),
+ *             prints a warning and returns
  *             false.
  */
 function substr_compare($main_str, $str, $offset, $length = NULL, $case_insensitivity = false)

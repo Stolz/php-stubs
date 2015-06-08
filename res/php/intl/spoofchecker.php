@@ -57,7 +57,7 @@ class Spoofchecker
     /**
      * Set the checks to run
      *
-     * @param string $checks
+     * @param long $checks
      *
      * @return void 
      */

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Returns field's data type
+ * Returns a field's data type name
  *
  * @phpstub
  *
  * @param resource $statement
- * @param int $field
+ * @param mixed $field
  *
- * @return mixed 
+ * @return mixed Returns the field data type as a string, or false on errors.
  */
 function oci_field_type($statement, $field)
 {

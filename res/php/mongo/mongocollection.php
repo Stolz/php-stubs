@@ -51,13 +51,34 @@ class MongoCollection
      * @phpstub-variable-parameters
      *
      * @param array $pipeline
+     * @param array $options
+     * @param array $op
      * @param array $op
      * @param array $_
      *
      * @return array The result of the aggregation as an array. The  will
      *               be set to  on success,  on failure.
      */
-    public function aggregate($pipeline, $op = array(), $_ = array())
+    public function aggregate($pipeline, $options = array(), $op, $op = array(), $_ = array())
+    {
+    }
+
+    /**
+     * Execute an aggregation pipeline command and retrieve results through a cursor
+     *
+     * @param array $command
+     * @param array $options
+     *
+     * @return MongoCommandCursor Returns a ``MongoCommandCursor`` object. Because this
+     *                            implements the ``Iterator`` interface you can
+     *                            iterate over each of the results as returned by the command query. The
+     *                            ``MongoCommandCursor`` also implements the
+     *                            ``MongoCursorInterface`` interface which adds the
+     *                            ,
+     *                            ,
+     *                            methods.
+     */
+    public function aggregateCursor($command, $options = array())
     {
     }
 
@@ -67,9 +88,10 @@ class MongoCollection
      * @param array $a
      * @param array $options
      *
-     * @return mixed If "safe" is set, returns an associative array with the status of the inserts
-     *               ("ok") and any error that may have occured ("err").  Otherwise, returns
-     *               true if the batch insert was successfully sent, false otherwise.
+     * @return mixed If the  parameter is set to acknowledge the write,
+     *               returns an associative array with the status of the inserts ("ok") and any
+     *               error that may have occurred ("err").  Otherwise, returns true if the
+     *               batch insert was successfully sent, false otherwise.
      */
     public function batchInsert($a, $options = array())
     {
@@ -79,23 +101,44 @@ class MongoCollection
      * Counts the number of documents in this collection
      *
      * @param array $query
-     * @param int $limit
-     * @param int $skip
+     * @param array $options
      *
      * @return int Returns the number of documents matching the query.
      */
-    public function count($query = array(), $limit = false, $skip = false)
+    public function count($query = array(), $options = array())
     {
     }
 
     /**
      * Creates a database reference
      *
-     * @param array $a
+     * @param mixed $document_or_id
      *
      * @return array Returns a database reference array.
      */
-    public function createDBRef($a)
+    public function createDBRef($document_or_id)
+    {
+    }
+
+    /**
+     * 
+       Creates an index on the specified field(s) if it does not already exist.
+      
+     *
+     * @param array $keys
+     * @param array $options
+     *
+     * @return bool Returns an array containing the status of the index creation. The array
+     *              contains whether the operation succeeded (), the
+     *              number of indexes before and after the operation
+     *              ( and
+     *              ), and whether the collection that the
+     *              index belongs to has been created
+     *              (). If the index already
+     *              existed and did not need to be created, a  field may
+     *              be present in lieu of .
+     */
+    public function createIndex($keys, $options = array())
     {
     }
 
@@ -104,7 +147,7 @@ class MongoCollection
      *
      * @param string|array $keys
      *
-     * @return array Returns the generated name of the key if successful, or null otherwise.
+     * @return array Returns the database response.
      */
     public function deleteIndex($keys)
     {
@@ -142,21 +185,28 @@ class MongoCollection
 
     /**
      * 
-       Creates an index on the given field(s), or does nothing if the index 
-       already exists
+       Creates an index on the specified field(s) if it does not already exist.
       
      *
      * @param string|array $key|keys
      * @param array $options
      *
-     * @return bool Returns true.
+     * @return bool Returns an array containing the status of the index creation. The array
+     *              contains whether the operation succeeded (), the
+     *              number of indexes before and after the operation
+     *              ( and
+     *              ), and whether the collection that the
+     *              index belongs to has been created
+     *              (). If the index already
+     *              existed and did not need to be created, a  field may
+     *              be present in lieu of .
      */
     public function ensureIndex($key|keys, $options = array())
     {
     }
 
     /**
-     * Querys this collection, returning a ``MongoCursor``
+     * Queries this collection, returning a ``MongoCursor``
       for the result set
      *
      * @param array $query
@@ -176,22 +226,23 @@ class MongoCollection
      * @param array $fields
      * @param array $options
      *
-     * @return void Returns the original document, or the modified document when
-     *              is set.
+     * @return array Returns the original document, or the modified document when
+     *               is set.
      */
     public function findAndModify($query, $update = array(), $fields = array(), $options = array())
     {
     }
 
     /**
-     * Querys this collection, returning a single element
+     * Queries this collection, returning a single element
      *
      * @param array $query
      * @param array $fields
+     * @param array $options
      *
      * @return array Returns record matching the search or null.
      */
-    public function findOne($query = array(), $fields = array())
+    public function findOne($query = array(), $fields = array(), $options = array())
     {
     }
 
@@ -209,12 +260,13 @@ class MongoCollection
     /**
      * Returns information about indexes on this collection
      *
-     * @return array This function returns an array in which each elements describes an array.
-     *               The elements contain the values  for the name of
-     *               the index,  for the namespace (the name of the
-     *               collection),  containing a list of all the keys
-     *               and their sort order that make up the index and
-     *               containing a MongoID object with the ID of this index.
+     * @return array This function returns an array in which each element describes an index.
+     *               Elements will contain the values  for the name of
+     *               the index,  for the namespace (a combination of the
+     *               database and collection name), and  for a list of all
+     *               fields in the index and their ordering. Additional values may be present for
+     *               special indexes, such as  or
+     *               .
      */
     public function getIndexInfo()
     {
@@ -232,12 +284,7 @@ class MongoCollection
     /**
      * Get the read preference for this collection
      *
-     * @return array This function returns an array describing the read preference. The array
-     *               contains the values  for the numeric read preference
-     *               mode,  for the name of the read preference
-     *               mode, and  containing a list of all tag set
-     *               criteria. If no tag sets were specified,  will not
-     *               be present in the array.
+     * @return array
      */
     public function getReadPreference()
     {
@@ -249,6 +296,15 @@ class MongoCollection
      * @return bool Returns the value of slaveOkay for this instance.
      */
     public function getSlaveOkay()
+    {
+    }
+
+    /**
+     * Get the write concern for this collection
+     *
+     * @return array
+     */
+    public function getWriteConcern()
     {
     }
 
@@ -267,9 +323,9 @@ class MongoCollection
     }
 
     /**
-     * Inserts an array into the collection
+     * Inserts a document into the collection
      *
-     * @param array $a
+     * @param array|object $document
      * @param array $options
      *
      * @return bool|array Returns an array containing the status of the insertion if the
@@ -277,7 +333,18 @@ class MongoCollection
      *                    inserted array is not empty (a ``MongoException`` will be
      *                    thrown if the inserted array is empty).
      */
-    public function insert($a, $options = array())
+    public function insert($document, $options = array())
+    {
+    }
+
+    /**
+     * Returns an array of cursors to iterator over a full collection in parallel
+     *
+     * @param int $num_cursors
+     *
+     * @return array[MongoCommandCursor] Returns an array of ``MongoCommandCursor`` objects.
+     */
+    public function parallelCollectionScan($num_cursors)
     {
     }
 
@@ -295,23 +362,23 @@ class MongoCollection
     }
 
     /**
-     * Saves an object to this collection
+     * Saves a document to this collection
      *
-     * @param array $a
+     * @param array|object $document
      * @param array $options
      *
      * @return mixed If  was set, returns an array containing the status of the save.
      *               Otherwise, returns a boolean representing if the array was not empty (an empty array will not
      *               be inserted).
      */
-    public function save($a, $options = array())
+    public function save($document, $options = array())
     {
     }
 
     /**
      * Set the read preference for this collection
      *
-     * @param int $read_preference
+     * @param string $read_preference
      * @param array $tags
      *
      * @return bool
@@ -328,6 +395,18 @@ class MongoCollection
      * @return bool Returns the former value of slaveOkay for this instance.
      */
     public function setSlaveOkay($ok = true)
+    {
+    }
+
+    /**
+     * Set the write concern for this database
+     *
+     * @param mixed $w
+     * @param int $wtimeout
+     *
+     * @return bool
+     */
+    public function setWriteConcern($w, $wtimeout = NULL)
     {
     }
 

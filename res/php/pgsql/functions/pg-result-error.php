@@ -7,8 +7,8 @@
  *
  * @param resource $result
  *
- * @return string Returns a ``string`` if there is an error associated with the
- *                parameter, false otherwise.
+ * @return string Returns a ``string``. Returns empty string if there is no error. If there is an error associated with the
+ *                parameter, returns false.
  */
 function pg_result_error($result)
 {

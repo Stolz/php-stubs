@@ -9,6 +9,6 @@
  *
  * @return bool 
  */
-function wincache_refresh_if_changed($files = array())
+function wincache_refresh_if_changed($files = NULL)
 {
 }

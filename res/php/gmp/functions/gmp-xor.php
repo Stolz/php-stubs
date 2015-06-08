@@ -5,10 +5,10 @@
  *
  * @phpstub
  *
- * @param resource $a
- * @param resource $b
+ * @param GMP $a
+ * @param GMP $b
  *
- * @return resource 
+ * @return GMP 
  */
 function gmp_xor($a, $b)
 {

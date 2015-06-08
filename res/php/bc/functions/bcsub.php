@@ -11,6 +11,6 @@
  *
  * @return string The result of the subtraction, as a string.
  */
-function bcsub($left_operand, $right_operand, $scale = NULL)
+function bcsub($left_operand, $right_operand, $scale = false)
 {
 }

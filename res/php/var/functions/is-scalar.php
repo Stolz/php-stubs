@@ -7,7 +7,7 @@
  *
  * @param mixed $var
  *
- * @return bool Returns true if  is a scalar false
+ * @return bool Returns true if  is a scalar, false
  *              otherwise.
  */
 function is_scalar($var)

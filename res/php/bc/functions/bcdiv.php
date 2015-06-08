@@ -12,6 +12,6 @@
  * @return string Returns the result of the division as a string, or null if
  *                is 0.
  */
-function bcdiv($left_operand, $right_operand, $scale = NULL)
+function bcdiv($left_operand, $right_operand, $scale = false)
 {
 }

@@ -6,7 +6,7 @@
  * @phpstub
  *
  * @param resource $statement
- * @param int $field
+ * @param mixed $field
  *
  * @return int Returns the precision as an integer, or false on errors.
  */

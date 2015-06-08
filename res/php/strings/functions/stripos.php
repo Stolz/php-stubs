@@ -9,9 +9,9 @@
  * @param string $needle
  * @param int $offset
  *
- * @return int Returns the position of where the needle exists relative to the beginnning of
- *             the  string (independent of offset).
- *             Also note that string positions start at 0, and not 1.
+ * @return mixed Returns the position of where the needle exists relative to the beginnning of
+ *               the  string (independent of offset).
+ *               Also note that string positions start at 0, and not 1.
  */
 function stripos($haystack, $needle, $offset = false)
 {

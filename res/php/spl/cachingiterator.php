@@ -1,7 +1,7 @@
 <?php
 
 /** @phpstub */
-class CachingIterator extends \IteratorIterator implements \OuterIterator, \Traversable, \Iterator, \ArrayAccess, \Countable
+class CachingIterator extends \IteratorIterator implements \OuterIterator, \ArrayAccess, \Countable
 {
     const CALL_TOSTRING = 1;
     const CATCH_GET_CHILD = 16;
@@ -48,9 +48,9 @@ class CachingIterator extends \IteratorIterator implements \OuterIterator, \Trav
     }
 
     /**
-     * The getCache purpose
+     * Retrieve the contents of the cache
      *
-     * @return void Description...
+     * @return array An ``array`` containing the cache items.
      */
     public function getCache()
     {
@@ -86,7 +86,7 @@ class CachingIterator extends \IteratorIterator implements \OuterIterator, \Trav
     /**
      * Return the key for the current element
      *
-     * @return void
+     * @return scalar
      */
     public function key()
     {

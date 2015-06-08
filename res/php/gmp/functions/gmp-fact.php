@@ -7,7 +7,7 @@
  *
  * @param mixed $a
  *
- * @return resource 
+ * @return GMP 
  */
 function gmp_fact($a)
 {

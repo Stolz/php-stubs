@@ -119,8 +119,9 @@ class XMLReader
      *
      * @param int $index
      *
-     * @return string The value of the attribute, or an empty string if no attribute exists
-     *                at  or not positioned of element.
+     * @return string The value of the attribute, or an empty string (before PHP 5.6) or null
+     *                (from PHP 5.6 onwards) if no attribute exists at
+     *                or is not positioned on the element.
      */
     public function getAttributeNo($index)
     {
@@ -132,9 +133,10 @@ class XMLReader
      * @param string $localName
      * @param string $namespaceURI
      *
-     * @return string The value of the attribute, or an empty string if no attribute with the
-     *                given  and
-     *                is found or not positioned of element.
+     * @return string The value of the attribute, or an empty string (before PHP 5.6) or null
+     *                (from PHP 5.6 onwards) if no attribute with the given
+     *                and  is
+     *                found or not positioned of element.
      */
     public function getAttributeNs($localName, $namespaceURI)
     {

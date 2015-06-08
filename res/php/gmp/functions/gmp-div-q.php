@@ -5,11 +5,11 @@
  *
  * @phpstub
  *
- * @param resource $a
- * @param resource $b
+ * @param GMP $a
+ * @param GMP $b
  * @param int $round
  *
- * @return resource 
+ * @return GMP 
  */
 function gmp_div_q($a, $b, $round = false)
 {
@@ -21,11 +21,11 @@ function gmp_div_q($a, $b, $round = false)
  * @phpstub-alias-of gmp_div_q
  * @phpstub
  *
- * @param resource $a
- * @param resource $b
+ * @param GMP $a
+ * @param GMP $b
  * @param int $round
  *
- * @return resource 
+ * @return GMP 
  */
 function gmp_div($a, $b, $round = false)
 {

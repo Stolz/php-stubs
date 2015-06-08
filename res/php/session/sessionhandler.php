@@ -13,6 +13,15 @@ class SessionHandler implements \SessionHandlerInterface
     }
 
     /**
+     * Return a new session ID
+     *
+     * @return string A session ID valid for the default session handler.
+     */
+    public function create_sid()
+    {
+    }
+
+    /**
      * Destroy a session
      *
      * @param string $session_id

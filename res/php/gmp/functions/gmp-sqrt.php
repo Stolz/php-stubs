@@ -5,9 +5,9 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
- * @return resource The integer portion of the square root, as a GMP number.
+ * @return GMP The integer portion of the square root, as a GMP number.
  */
 function gmp_sqrt($a)
 {

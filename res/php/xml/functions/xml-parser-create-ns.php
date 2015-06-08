@@ -10,6 +10,6 @@
  *
  * @return resource Returns a resource handle for the new XML parser.
  */
-function xml_parser_create_ns($encoding = NULL, $separator = '\':\'')
+function xml_parser_create_ns($encoding = NULL, $separator = ':')
 {
 }

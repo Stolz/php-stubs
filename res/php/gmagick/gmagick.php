@@ -775,9 +775,9 @@ class Gmagick
     }
 
     /**
-     * Return if the image has a matte channel
+     * Check if the image has a matte channel
      *
-     * @return int Returns TRUE if the image has a matte channel otherwise false.
+     * @return int Returns true if the image has a matte channel, otherwise false.
      */
     public function getimagematte()
     {

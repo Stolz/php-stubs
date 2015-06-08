@@ -5,10 +5,10 @@
  *
  * @phpstub
  *
- * @param resource $a
- * @param resource $b
+ * @param GMP $a
+ * @param GMP $b
  *
- * @return resource A GMP number representing the bitwise  comparison.
+ * @return GMP A GMP number representing the bitwise  comparison.
  */
 function gmp_and($a, $b)
 {

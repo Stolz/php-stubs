@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  *
  * @return int Returns 1 if  is positive,
  *             -1 if  is negative,

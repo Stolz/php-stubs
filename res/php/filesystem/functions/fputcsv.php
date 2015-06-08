@@ -9,9 +9,10 @@
  * @param array $fields
  * @param string $delimiter
  * @param string $enclosure
+ * @param string $escape_char
  *
  * @return int Returns the length of the written string.
  */
-function fputcsv($handle, $fields, $delimiter = '\',\'', $enclosure = '\'"\'')
+function fputcsv($handle, $fields, $delimiter = ',', $enclosure = '\'"\'', $escape_char = '\\')
 {
 }

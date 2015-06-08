@@ -13,6 +13,6 @@
  * @return string Returns the result as a string, or null if
  *                is 0.
  */
-function bcpowmod($left_operand, $right_operand, $modulus, $scale = NULL)
+function bcpowmod($left_operand, $right_operand, $modulus, $scale = false)
 {
 }

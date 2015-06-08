@@ -5,10 +5,10 @@
  *
  * @phpstub
  *
- * @param resource $a
- * @param resource $b
+ * @param GMP $a
+ * @param GMP $b
  *
- * @return resource A GMP number representing the sum of the arguments.
+ * @return GMP A GMP number representing the sum of the arguments.
  */
 function gmp_add($a, $b)
 {

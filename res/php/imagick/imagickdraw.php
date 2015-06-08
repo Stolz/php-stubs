@@ -241,6 +241,15 @@ class ImagickDraw
     }
 
     /**
+     * Description
+     *
+     * @return int 
+     */
+    public function getFontStretch()
+    {
+    }
+
+    /**
      * Returns the font style
      *
      * @return int Returns the font style constant (STYLE_) associated with the ImagickDraw object
@@ -385,6 +394,33 @@ class ImagickDraw
      *                or false if text encoding is not set.
      */
     public function getTextEncoding()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @return float 
+     */
+    public function getTextInterlineSpacing()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @return float 
+     */
+    public function getTextInterwordSpacing()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @return float 
+     */
+    public function getTextKerning()
     {
     }
 
@@ -836,6 +872,15 @@ class ImagickDraw
     }
 
     /**
+     * Description
+     *
+     * @return void 
+     */
+    public function resetVectorGraphics()
+    {
+    }
+
+    /**
      * Applies the specified rotation to the current coordinate space
      *
      * @param float $degrees
@@ -1040,6 +1085,18 @@ class ImagickDraw
     }
 
     /**
+     * Description
+     *
+     * @param string $x_resolution
+     * @param string $y_resolution
+     *
+     * @return void 
+     */
+    public function setResolution($x_resolution, $y_resolution)
+    {
+    }
+
+    /**
      * Specifies the opacity of stroked object outlines
      *
      * @param float $opacity
@@ -1194,13 +1251,46 @@ class ImagickDraw
     }
 
     /**
-     * Specifies specifies the text code set
+     * Specifies the text code set
      *
      * @param string $encoding
      *
      * @return bool 
      */
     public function setTextEncoding($encoding)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param float $spacing
+     *
+     * @return void 
+     */
+    public function setTextInterlineSpacing($spacing)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param float $spacing
+     *
+     * @return void 
+     */
+    public function setTextInterwordSpacing($spacing)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param float $kerning
+     *
+     * @return void 
+     */
+    public function setTextKerning($kerning)
     {
     }
 

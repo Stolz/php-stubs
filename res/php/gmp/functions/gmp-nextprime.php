@@ -7,8 +7,8 @@
  *
  * @param int $a
  *
- * @return resource Return the next prime number greater than ,
- *                  as a GMP number.
+ * @return GMP Return the next prime number greater than ,
+ *             as a GMP number.
  */
 function gmp_nextprime($a)
 {

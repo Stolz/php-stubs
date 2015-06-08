@@ -19,11 +19,23 @@ class Yaf_Route_Simple implements \Yaf_Route_Interface
     }
 
     /**
+     * Assemble a url
+     *
+     * @param array $info
+     * @param array $query
+     *
+     * @return string 
+     */
+    public function assemble($info, $query = array())
+    {
+    }
+
+    /**
      * Route a request
      *
      * @param Yaf_Request_Abstract $request
      *
-     * @return bool always be TRUE
+     * @return bool always be true
      */
     public function route($request)
     {

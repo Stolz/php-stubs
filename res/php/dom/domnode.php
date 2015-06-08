@@ -1,7 +1,7 @@
 <?php
 
 /** @phpstub */
-class DomNode
+class DOMNode
 {
     /** @var string */
     public $textContent;
@@ -82,20 +82,6 @@ class DomNode
 
     /**
      * 
-       Adds a namespace declaration to a node
-      
-     *
-     * @param string $uri
-     * @param string $prefix
-     *
-     * @return bool 
-     */
-    public function add_namespace($uri, $prefix)
-    {
-    }
-
-    /**
-     * 
        Adds new child at the end of the children
       
      *
@@ -109,54 +95,6 @@ class DomNode
 
     /**
      * 
-       Adds a new child at the end of the children
-      
-     *
-     * @param DOMNode $newnode
-     *
-     * @return DOMNode Returns the appended node on success.
-     */
-    public function append_child($newnode)
-    {
-    }
-
-    /**
-     * 
-       Adds new sibling to a node
-      
-     *
-     * @param domelement $newnode
-     *
-     * @return domelement
-     */
-    public function append_sibling($newnode)
-    {
-    }
-
-    /**
-     * 
-       Returns list of attributes
-      
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-    }
-
-    /**
-     * 
-       Returns children of node
-      
-     *
-     * @return array
-     */
-    public function child_nodes()
-    {
-    }
-
-    /**
-     * 
        Clones a node
       
      *
@@ -165,39 +103,6 @@ class DomNode
      * @return DOMNode The cloned node.
      */
     public function cloneNode($deep = NULL)
-    {
-    }
-
-    /**
-     * 
-       Clones a node
-      
-     *
-     * @return domelement
-     */
-    public function clone_node()
-    {
-    }
-
-    /**
-     * 
-       Dumps a single node
-      
-     *
-     * @return string
-     */
-    public function dump_node()
-    {
-    }
-
-    /**
-     * 
-       Returns first child of node
-      
-     *
-     * @return domelement
-     */
-    public function first_child()
     {
     }
 
@@ -216,17 +121,6 @@ class DomNode
      * @return string Returns a ``string`` containing the XPath, or null in case of an error.
      */
     public function getNodePath()
-    {
-    }
-
-    /**
-     * 
-       Gets content of node
-      
-     *
-     * @return string
-     */
-    public function get_content()
     {
     }
 
@@ -254,28 +148,6 @@ class DomNode
 
     /**
      * 
-       Checks if node has attributes
-      
-     *
-     * @return bool
-     */
-    public function has_attributes()
-    {
-    }
-
-    /**
-     * 
-       Checks if node has children
-      
-     *
-     * @return bool
-     */
-    public function has_child_nodes()
-    {
-    }
-
-    /**
-     * 
        Adds a new child before a reference node
       
      *
@@ -285,20 +157,6 @@ class DomNode
      * @return DOMNode The inserted node.
      */
     public function insertBefore($newnode, $refnode = NULL)
-    {
-    }
-
-    /**
-     * 
-       Inserts new node as child
-      
-     *
-     * @param domelement $newnode
-     * @param domelement $refnode
-     *
-     * @return domelement
-     */
-    public function insert_before($newnode, $refnode)
     {
     }
 
@@ -343,28 +201,6 @@ class DomNode
 
     /**
      * 
-       Checks if node is blank
-      
-     *
-     * @return bool
-     */
-    public function is_blank_node()
-    {
-    }
-
-    /**
-     * 
-       Returns last child of node
-      
-     *
-     * @return domelement
-     */
-    public function last_child()
-    {
-    }
-
-    /**
-     * 
        Gets the namespace URI of the node based on the prefix
       
      *
@@ -391,100 +227,12 @@ class DomNode
 
     /**
      * 
-       Returns the next sibling of node
-      
-     *
-     * @return domelement
-     */
-    public function next_sibling()
-    {
-    }
-
-    /**
-     * 
-       Returns name of node
-      
-     *
-     * @return string
-     */
-    public function node_name()
-    {
-    }
-
-    /**
-     * 
-       Returns type of node
-      
-     *
-     * @return int
-     */
-    public function node_type()
-    {
-    }
-
-    /**
-     * 
-       Returns value of a node
-      
-     *
-     * @return string
-     */
-    public function node_value()
-    {
-    }
-
-    /**
-     * 
        Normalizes the node
       
      *
      * @return void 
      */
     public function normalize()
-    {
-    }
-
-    /**
-     * 
-       Returns the document this node belongs to
-      
-     *
-     * @return domdocument
-     */
-    public function owner_document()
-    {
-    }
-
-    /**
-     * 
-       Returns the parent of the node
-      
-     *
-     * @return domnode
-     */
-    public function parent_node()
-    {
-    }
-
-    /**
-     * 
-       Returns name space prefix of node
-      
-     *
-     * @return string
-     */
-    public function prefix()
-    {
-    }
-
-    /**
-     * 
-       Returns the previous sibling of node
-      
-     *
-     * @return domelement
-     */
-    public function previous_sibling()
     {
     }
 
@@ -503,19 +251,6 @@ class DomNode
 
     /**
      * 
-       Removes child from list of children
-      
-     *
-     * @param domtext $oldchild
-     *
-     * @return domtext
-     */
-    public function remove_child($oldchild)
-    {
-    }
-
-    /**
-     * 
        Replaces a child
       
      *
@@ -525,82 +260,6 @@ class DomNode
      * @return DOMNode The old node or false if an error occur.
      */
     public function replaceChild($newnode, $oldnode)
-    {
-    }
-
-    /**
-     * 
-       Replaces a child
-      
-     *
-     * @param domelement $newnode
-     * @param domelement $oldnode
-     *
-     * @return domelement
-     */
-    public function replace_child($newnode, $oldnode)
-    {
-    }
-
-    /**
-     * 
-       Replaces node
-      
-     *
-     * @param domelement $newnode
-     *
-     * @return domelement
-     */
-    public function replace_node($newnode)
-    {
-    }
-
-    /**
-     * 
-       Sets content of node
-      
-     *
-     * @param string $content
-     *
-     * @return bool
-     */
-    public function set_content($content)
-    {
-    }
-
-    /**
-     * 
-       Sets name of node
-      
-     *
-     * @return bool
-     */
-    public function set_name()
-    {
-    }
-
-    /**
-     * 
-       Sets namespace of a node
-      
-     *
-     * @param string $uri
-     * @param string $prefix
-     *
-     * @return void
-     */
-    public function set_namespace($uri, $prefix = NULL)
-    {
-    }
-
-    /**
-     * 
-       Deletes node
-      
-     *
-     * @return void
-     */
-    public function unlink_node()
     {
     }
 }

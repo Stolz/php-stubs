@@ -4,7 +4,7 @@
 class Mutex
 {
     /**
-     * Create a new Mutex
+     * Create a Mutex
      *
      * @param boolean $lock
      *
@@ -15,7 +15,7 @@ class Mutex
     }
 
     /**
-     * To destroy a handle to a Mutex and free the associated resources
+     * Destroy Mutex
      *
      * @param long $mutex
      *
@@ -26,7 +26,7 @@ class Mutex
     }
 
     /**
-     * The lock purpose
+     * Acquire Mutex
      *
      * @param long $mutex
      *
@@ -37,7 +37,7 @@ class Mutex
     }
 
     /**
-     * To attempt to lock a Mutex without blocking.
+     * Attempt to Acquire Mutex
      *
      * @param long $mutex
      *
@@ -48,7 +48,7 @@ class Mutex
     }
 
     /**
-     * Attempts to unlock a Mutex
+     * Release Mutex
      *
      * @param long $mutex
      * @param boolean $destroy

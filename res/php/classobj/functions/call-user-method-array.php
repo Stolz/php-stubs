@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Call a user method given with an array of parameters [deprecated]
+ * Call a user method given with an array of parameters
  *
  * @phpstub
  *

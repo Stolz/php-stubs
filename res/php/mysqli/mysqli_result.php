@@ -152,7 +152,7 @@ class mysqli_result implements \Traversable
      * @return object Returns an object with string properties that corresponds to the fetched
      *                row or null if there are no more rows in resultset.
      */
-    public function fetch_object($class_name = NULL, $params = array(), $result, $class_name = NULL, $params = array())
+    public function fetch_object($class_name = 'stdClass', $params = array(), $result, $class_name = 'stdClass', $params = array())
     {
     }
 

@@ -16,7 +16,7 @@ class XSLTProcessor
      * @param string $namespaceURI
      * @param string $localName
      *
-     * @return string The value of the parameter or null if it's not set.
+     * @return string The value of the parameter (as a string), or false if it's not set.
      */
     public function getParameter($namespaceURI, $localName)
     {
@@ -45,7 +45,7 @@ class XSLTProcessor
      *
      * @param object $stylesheet
      *
-     * @return void 
+     * @return bool 
      */
     public function importStylesheet($stylesheet)
     {
@@ -137,7 +137,7 @@ class XSLTProcessor
     /**
      * Transform to XML
      *
-     * @param DOMDocument $doc
+     * @param object $doc
      *
      * @return string The result of the transformation as a string or false on error.
      */

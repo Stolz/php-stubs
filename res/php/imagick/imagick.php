@@ -1,7 +1,7 @@
 <?php
 
 /** @phpstub */
-class Imagick implements \Iterator, \Traversable
+class Imagick implements \Iterator
 {
     const ALIGN_CENTER = NULL;
     const ALIGN_LEFT = NULL;
@@ -353,6 +353,7 @@ class Imagick implements \Iterator, \Traversable
     const RESOURCETYPE_FILE = NULL;
     const RESOURCETYPE_MAP = NULL;
     const RESOURCETYPE_MEMORY = NULL;
+    const RESOURCETYPE_THREAD = NULL;
     const RESOURCETYPE_UNDEFINED = NULL;
     const SPARSECOLORMETHOD_BARYCENTRIC = NULL;
     const SPARSECOLORMETHOD_BILINEAR = NULL;
@@ -393,6 +394,15 @@ class Imagick implements \Iterator, \Traversable
      * @param mixed $files
      */
     public function __construct($files)
+    {
+    }
+
+    /**
+     * Returns the image as a string.
+     *
+     * @return string Returns the string content on success or an empty string on failure.
+     */
+    public function __toString()
     {
     }
 
@@ -520,6 +530,17 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $CHANNEL
+     *
+     * @return void 
+     */
+    public function autoLevelImage($CHANNEL = 'Imagick::CHANNEL_DEFAULT')
+    {
+    }
+
+    /**
      * Average a set of images
      *
      * @return Imagick Returns a new Imagick object on success.
@@ -536,6 +557,17 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function blackThresholdImage($threshold)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param float $factor
+     *
+     * @return void 
+     */
+    public function blueShiftImage($factor = 1.5)
     {
     }
 
@@ -566,6 +598,19 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $brightness
+     * @param string $contrast
+     * @param string $CHANNEL
+     *
+     * @return void 
+     */
+    public function brightnessContrastImage($brightness, $contrast, $CHANNEL = 'Imagick::CHANNEL_DEFAULT')
+    {
+    }
+
+    /**
      * Simulates a charcoal drawing
      *
      * @param float $radius
@@ -592,6 +637,17 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $CHANNEL
+     *
+     * @return void 
+     */
+    public function clampImage($CHANNEL = 'Imagick::CHANNEL_DEFAULT')
+    {
+    }
+
+    /**
      * Clears all resources associated to Imagick object
      *
      * @return bool 
@@ -606,6 +662,18 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function clipImage()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $pathname
+     * @param string $inside
+     *
+     * @return void 
+     */
+    public function clipImagePath($pathname, $inside)
     {
     }
 
@@ -663,6 +731,17 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function colorFloodfillImage($fill, $fuzz, $bordercolor, $x, $y)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $color_matrix
+     *
+     * @return void 
+     */
+    public function colorMatrixImage($color_matrix = 'Imagick::CHANNEL_DEFAULT')
     {
     }
 
@@ -789,6 +868,17 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $mode
+     *
+     * @return void 
+     */
+    public function count($mode = NULL)
+    {
+    }
+
+    /**
      * Extracts a region of the image
      *
      * @param int $width
@@ -862,6 +952,17 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function deleteImageArtifact($artifact)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $name
+     *
+     * @return void 
+     */
+    public function deleteImageProperty($name)
     {
     }
 
@@ -1036,6 +1137,18 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param ImagickKernel $ImagickKernel
+     * @param int $CHANNEL
+     *
+     * @return void 
+     */
+    public function filter($ImagickKernel, $CHANNEL = false)
+    {
+    }
+
+    /**
      * Merges a sequence of images
      *
      * @return Imagick 
@@ -1076,6 +1189,17 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function flopImage()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param bool $magnitude
+     *
+     * @return void 
+     */
+    public function forwardFourierTransformImage($magnitude)
     {
     }
 
@@ -1254,6 +1378,17 @@ class Imagick implements \Iterator, \Traversable
      * @return string Returns the artifact value on success.
      */
     public function getImageArtifact($artifact)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $key
+     *
+     * @return string 
+     */
+    public function getImageAttribute($key)
     {
     }
 
@@ -1645,6 +1780,15 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @return string 
+     */
+    public function getImageMimeType()
+    {
+    }
+
+    /**
      * Gets the image orientation
      *
      * @return int Returns an int on success.
@@ -1956,6 +2100,15 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @return int 
+     */
+    public function getQuantum()
+    {
+    }
+
+    /**
      * Gets the quantum depth
      *
      * @return array Returns the Imagick quantum depth as a string.
@@ -1967,9 +2120,22 @@ class Imagick implements \Iterator, \Traversable
     /**
      * Returns the Imagick quantum range
      *
-     * @return array Returns the Imagick quantum range as a string.
+     * @return array Returns an associative array containing the quantum range as an
+     *               ``integer`` () and as a
+     *               ``string`` ().
      */
     public function getQuantumRange()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $key
+     *
+     * @return string 
+     */
+    public function getRegistry($key)
     {
     }
 
@@ -2075,6 +2241,17 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $embedText
+     *
+     * @return string|false 
+     */
+    public function identifyFormat($embedText)
+    {
+    }
+
+    /**
      * Identifies an image and fetches attributes
      *
      * @param bool $appendRawOutput
@@ -2111,6 +2288,18 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function importImagePixels($x, $y, $width, $height, $map, $storage, $pixels)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $complement
+     * @param string $magnitude
+     *
+     * @return void 
+     */
+    public function inverseFourierTransformImage($complement, $magnitude)
     {
     }
 
@@ -2166,6 +2355,15 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @return array An array containing the key/values from the registry.
+     */
+    public function listRegistry()
+    {
+    }
+
+    /**
      * Scales an image proportionally 2x
      *
      * @return bool 
@@ -2217,7 +2415,7 @@ class Imagick implements \Iterator, \Traversable
      *
      * @param int $layer_method
      *
-     * @return bool 
+     * @return Imagick Returns an Imagick object containing the merged image.
      */
     public function mergeImageLayers($layer_method)
     {
@@ -2268,6 +2466,20 @@ class Imagick implements \Iterator, \Traversable
      * @return Imagick This method returns a new Imagick object on success.
      */
     public function morphImages($number_frames)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param int $morphologyMethod
+     * @param int $iterations
+     * @param ImagickKernel $ImagickKernel
+     * @param string $CHANNEL
+     *
+     * @return void 
+     */
+    public function morphology($morphologyMethod, $iterations, $ImagickKernel, $CHANNEL = NULL)
     {
     }
 
@@ -2674,6 +2886,17 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $filenames
+     *
+     * @return Imagick The Imagick object that contains all the images.
+     */
+    public function readimages($filenames)
+    {
+    }
+
+    /**
      * Recolors image
      *
      * @param array $matrix
@@ -2801,6 +3024,18 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $angle
+     * @param string $CHANNEL
+     *
+     * @return void 
+     */
+    public function rotationalBlurImage($angle, $CHANNEL = 'Imagick::CHANNEL_DEFAULT')
+    {
+    }
+
+    /**
      * Rounds image corners
      *
      * @param float $x_rounding
@@ -2851,6 +3086,20 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function segmentImage($COLORSPACE, $cluster_threshold, $smooth_threshold, $verbose = false)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param float $radius
+     * @param float $sigma
+     * @param float $threshold
+     * @param int $CHANNEL
+     *
+     * @return void 
+     */
+    public function selectiveBlurImage($radius, $sigma, $threshold, $CHANNEL)
     {
     }
 
@@ -3008,6 +3257,18 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $key
+     * @param string $value
+     *
+     * @return void 
+     */
+    public function setImageAttribute($key, $value)
+    {
+    }
+
+    /**
      * Sets the image background color
      *
      * @param mixed $background
@@ -3026,6 +3287,17 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function setImageBias($bias)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $bias
+     *
+     * @return void 
+     */
+    public function setImageBiasQuantum($bias)
     {
     }
 
@@ -3407,11 +3679,11 @@ class Imagick implements \Iterator, \Traversable
     /**
      * Sets the image ticks-per-second
      *
-     * @param int $ticks_per-second
+     * @param int $ticks_per_second
      *
      * @return bool 
      */
-    public function setImageTicksPerSecond($ticks_per-second)
+    public function setImageTicksPerSecond($ticks_per_second)
     {
     }
 
@@ -3525,6 +3797,29 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function setPointSize($point_size)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param callable $callback
+     *
+     * @return void 
+     */
+    public function setProgressMonitor($callback)
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param string $key
+     * @param string $value
+     *
+     * @return void 
+     */
+    public function setRegistry($key, $value)
     {
     }
 
@@ -3692,6 +3987,18 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param string $stack
+     * @param string $offset
+     *
+     * @return Imagick The new smushed image.
+     */
+    public function smushImages($stack, $offset)
+    {
+    }
+
+    /**
      * Applies a solarizing effect to the image
      *
      * @param int $threshold
@@ -3741,6 +4048,20 @@ class Imagick implements \Iterator, \Traversable
     }
 
     /**
+     * Description
+     *
+     * @param int $type
+     * @param int $width
+     * @param int $height
+     * @param string $CHANNEL
+     *
+     * @return void 
+     */
+    public function statisticImage($type, $width, $height, $CHANNEL = 'Imagick::CHANNEL_DEFAULT')
+    {
+    }
+
+    /**
      * Hides a digital watermark within the image
      *
      * @param Imagick $watermark_wand
@@ -3769,6 +4090,19 @@ class Imagick implements \Iterator, \Traversable
      * @return bool 
      */
     public function stripImage()
+    {
+    }
+
+    /**
+     * Description
+     *
+     * @param Imagick $Imagick
+     * @param array $offset
+     * @param float $similarity
+     *
+     * @return Imagick 
+     */
+    public function subImageMatch($Imagick, &$offset = array(), &$similarity = NULL)
     {
     }
 
@@ -3838,9 +4172,20 @@ class Imagick implements \Iterator, \Traversable
      * @param string $crop
      * @param string $geometry
      *
-     * @return Imagick 
+     * @return Imagick Returns an Imagick object containing the transformed image.
      */
     public function transformImage($crop, $geometry)
+    {
+    }
+
+    /**
+     * Transforms an image to a new colorspace.
+     *
+     * @param int $colorspace
+     *
+     * @return bool 
+     */
+    public function transformImageColorspace($colorspace)
     {
     }
 

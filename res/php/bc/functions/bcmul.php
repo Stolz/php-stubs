@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Multiply two arbitrary precision number
+ * Multiply two arbitrary precision numbers
  *
  * @phpstub
  *
@@ -11,6 +11,6 @@
  *
  * @return string Returns the result as a string.
  */
-function bcmul($left_operand, $right_operand, $scale = NULL)
+function bcmul($left_operand, $right_operand, $scale = false)
 {
 }

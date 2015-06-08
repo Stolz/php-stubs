@@ -5,11 +5,11 @@
  *
  * @phpstub
  *
- * @param resource $base
- * @param resource $exp
- * @param resource $mod
+ * @param GMP $base
+ * @param GMP $exp
+ * @param GMP $mod
  *
- * @return resource The new (raised) number, as a GMP number.
+ * @return GMP The new (raised) number, as a GMP number.
  */
 function gmp_powm($base, $exp, $mod)
 {

@@ -5,8 +5,8 @@
  *
  * @phpstub
  *
- * @param resource $a
- * @param resource $p
+ * @param GMP $a
+ * @param GMP $p
  *
  * @return int 
  */

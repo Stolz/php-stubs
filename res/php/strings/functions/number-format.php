@@ -26,6 +26,6 @@ function number_format($number, $decimals = false)
  *
  * @return string
  */
-function number_format($number, $decimals = false, $dec_point = '\'.\'', $thousands_sep = '\',\'')
+function number_format($number, $decimals = false, $dec_point = '.', $thousands_sep = ',')
 {
 }

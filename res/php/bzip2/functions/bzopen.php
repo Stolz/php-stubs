@@ -5,12 +5,12 @@
  *
  * @phpstub
  *
- * @param string $filename
+ * @param mixed $file
  * @param string $mode
  *
  * @return resource If the open fails,  returns false, otherwise
  *                  it returns a pointer to the newly opened file.
  */
-function bzopen($filename, $mode)
+function bzopen($file, $mode)
 {
 }

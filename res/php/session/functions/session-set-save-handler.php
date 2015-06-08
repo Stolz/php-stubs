@@ -11,10 +11,11 @@
  * @param callable $write
  * @param callable $destroy
  * @param callable $gc
+ * @param callable $create_sid
  *
  * @return bool
  */
-function session_set_save_handler($open, $close, $read, $write, $destroy, $gc)
+function session_set_save_handler($open, $close, $read, $write, $destroy, $gc, $create_sid = NULL)
 {
 }
 

@@ -8,7 +8,7 @@
  * @param mixed $number
  * @param int $base
  *
- * @return resource 
+ * @return GMP 
  */
 function gmp_init($number, $base = false)
 {

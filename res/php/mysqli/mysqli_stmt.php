@@ -112,6 +112,13 @@ class mysqli_stmt
     }
 
     /**
+     * Constructs a new ``mysqli_stmt`` object
+     */
+    public function __construct()
+    {
+    }
+
+    /**
      * Used to get the current value of a statement attribute
      *
      * @param int $attr

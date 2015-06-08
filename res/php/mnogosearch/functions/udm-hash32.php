@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Return Hash32 checksum of gived string
+ * Return Hash32 checksum of given string
  *
  * @phpstub
  *

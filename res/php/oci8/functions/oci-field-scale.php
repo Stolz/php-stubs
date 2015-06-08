@@ -6,7 +6,7 @@
  * @phpstub
  *
  * @param resource $statement
- * @param int $field
+ * @param mixed $field
  *
  * @return int Returns the scale as an integer, or false on errors.
  */

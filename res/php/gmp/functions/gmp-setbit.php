@@ -5,12 +5,12 @@
  *
  * @phpstub
  *
- * @param resource $a
+ * @param GMP $a
  * @param int $index
- * @param bool $set_clear
+ * @param bool $bit_on
  *
  * @return void 
  */
-function gmp_setbit($a, $index, $set_clear = true)
+function gmp_setbit(&$a, $index, $bit_on = true)
 {
 }

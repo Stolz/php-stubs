@@ -6,8 +6,10 @@ class MongoBinData
     const BYTE_ARRAY = 2;
     const CUSTOM = 128;
     const FUNC = 1;
+    const GENERIC = 0;
     const MD5 = 5;
     const UUID = 3;
+    const UUID_RFC4122 = 4;
 
     /** @var int */
     public $type;
@@ -21,7 +23,7 @@ class MongoBinData
      * @param string $data
      * @param int $type
      */
-    public function __construct($data, $type = 2)
+    public function __construct($data, $type = false)
     {
     }
 

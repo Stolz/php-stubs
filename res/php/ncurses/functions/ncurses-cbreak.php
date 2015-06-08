@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Switch of input buffering
+ * Switch off input buffering
  *
  * @phpstub
  *

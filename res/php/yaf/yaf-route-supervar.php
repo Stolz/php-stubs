@@ -15,13 +15,25 @@ class Yaf_Route_Supervar implements \Yaf_Route_Interface
     }
 
     /**
+     * Assemble a url
+     *
+     * @param array $info
+     * @param array $query
+     *
+     * @return string 
+     */
+    public function assemble($info, $query = array())
+    {
+    }
+
+    /**
      * The route purpose
      *
      * @param Yaf_Request_Abstract $request
      *
      * @return bool If there is a key(which was defined in
-     *              ) in $_GET,  return TRUE.
-     *              otherwise return FALSE.
+     *              ) in $_GET, return true.
+     *              otherwise return false.
      */
     public function route($request)
     {

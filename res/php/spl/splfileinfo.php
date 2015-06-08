@@ -260,24 +260,24 @@ class SplFileInfo
     }
 
     /**
-     * Sets the class name used with 
+     * Sets the class used with 
      *
      * @param string $class_name
      *
      * @return void 
      */
-    public function setFileClass($class_name = NULL)
+    public function setFileClass($class_name = 'SplFileObject')
     {
     }
 
     /**
-     * Sets the class used with getFileInfo and getPathInfo
+     * Sets the class used with  and 
      *
      * @param string $class_name
      *
      * @return void 
      */
-    public function setInfoClass($class_name = NULL)
+    public function setInfoClass($class_name = 'SplFileInfo')
     {
     }
 }

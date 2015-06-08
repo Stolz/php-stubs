@@ -5,7 +5,7 @@
  *
  * @phpstub
  *
- * @param int $fd
+ * @param mixed $fd
  *
  * @return string On success, returns a ``string`` of the absolute path of the
  *                . On failure, returns false
