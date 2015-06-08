@@ -97,11 +97,10 @@ class DocumentationParser
             $content = preg_replace(self::$undefinedEntities, '', $content);
             $content = preg_replace(array_keys(self::$entitySubstitutes), array_values(self::$entitySubstitutes), $content);
 
-            if ('' === trim($content)) {
+            if ('' === trim($content) or  ! $doc = simplexml_load_string($content)) {
                 continue;
             }
 
-            $doc = simplexml_load_string($content);
             $doc->registerXPathNamespace('search', 'http://docbook.org/ns/docbook');
             if (isset($doc->refnamediv)) {
                 // Ignore methods, we will parse them as part of the class.
